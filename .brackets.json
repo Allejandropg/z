@@ -1,0 +1,9 @@
+{
+    "less": [
+                "atributos/styles/layout/var.less",  
+                "atributos/styles/layout/font.less", 
+                "atributos/styles/layout/global.less",
+                "atributos/styles/layout/header.less", 
+                "atributos/styles/layout/style.less" 
+            ]
+}   

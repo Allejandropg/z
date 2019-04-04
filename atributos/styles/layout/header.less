@@ -1,0 +1,273 @@
+@import "var.less";
+
+.header-area {
+	position: absolute;
+	top:0;
+	right: 0;
+	left:0;
+	min-height: 17.333vh;
+	z-index: 999;
+}
+
+.header-content {
+	display: grid;
+	grid-template-columns: 20.4166% auto;
+	grid-gap: 8.7583%;
+	align-items: center;
+	width: 100%;
+}
+.menu {
+    display: flex;
+    justify-content: flex-end;
+}
+.nav {
+	align-items: center;
+}
+.nav-item {
+	flex-grow: 1;
+	text-align: center;
+
+	& + .nav-item {
+		position: relative;
+		margin-left: 20px;
+	}
+}
+
+.nav-link {
+	position: relative;
+	display: block;
+	text-transform: uppercase;
+	color: @white;
+	padding: 0;
+	overflow: hidden;
+	&:hover {
+		color: #FFF;
+		&::before {
+			max-width: 100%;
+		}
+	}
+
+	&::before {
+		position: absolute;
+		top: 0;
+		color: @blue;
+		content: attr(data-hover);
+		left: 50%;
+		max-width: 0;
+		transform: translateX(-50%);
+		white-space: nowrap;
+		-webkit-transition: max-width 0.5s;
+		-moz-transition: max-width 0.5s;
+		transition: max-width 0.5s;
+		overflow: hidden;
+	}
+}
+
+@media @smallDesk {
+	.header-area {
+		min-height: auto;
+	}
+
+	.header-up {
+		font-size: .85em
+	}
+
+	.nav-link {
+		font-size: .75em;
+	}
+}
+
+@media @tablet {
+	.header-up {
+		font-size: .75em
+	}
+
+	.header-content {
+		display: grid;
+		grid-template-columns: 20.4166% auto;
+		grid-gap: 5.7583%;
+		width: 100%;
+		align-items: center;
+	}
+
+	.nav-link {
+		font-size: .65em;
+	}
+}
+
+@media @smartPhones {
+	.navbar-brand {
+		width: 20%;
+		min-width: 150px;
+	}
+
+	.nav-burger {
+		position: absolute;
+		top: 30px;
+		right: 10px;
+		width: 40px;
+		height: 40px;
+		cursor: pointer;
+		z-index: 7777;
+		transform: translate(0%, -50%);
+		cursor: pointer !important;
+
+		span {
+			position: absolute;
+			background: @green;
+			display: block;
+			right: 8px;
+			left: 8px;
+			height: 2px;
+			border-radius: 1px;
+		}
+
+		&.is-hidden {
+			span {
+				&:nth-of-type(1) {
+					top: 25%;
+				}
+
+				&:nth-of-type(2) {
+					top: 50%;
+					margin-top: -1px;
+				}
+
+				&:nth-of-type(3) {
+					top: 75%;
+					margin-top: -1px;
+				}
+			}
+		}
+
+		&.is-active {
+			span {
+				top: 50%;
+				margin: 0;
+
+				&:nth-of-type(1),
+				&:nth-of-type(3) {
+					-ms-transform: rotate(45deg);
+					-webkit-transform: rotate(45deg);
+					transform: rotate(45deg);
+				}
+
+				&:nth-of-type(2) {
+					-ms-transform: rotate(-45deg);
+					-webkit-transform: rotate(-45deg);
+					transform: rotate(-45deg);
+				}
+			}
+		}
+	}
+
+	.nav-item + .nav-item::before {
+		content: unset;
+	}
+
+	.menu-group {
+		.menu {
+			display: block;
+		}
+	}
+
+
+	.menu {
+		background: #163a7d;
+		display: none;
+		position: fixed;
+		top: 0;
+		bottom: 0;
+		width: auto;
+		overflow-y: auto;
+		z-index: 7776;
+		padding-top: 8%;
+
+		&.is-active {
+			right: 0;
+			left: 0;
+			box-shadow: -10px 0 30px rgba(0, 0, 0, 0.9);
+		}
+
+		&.is-hidden {
+			left: 100%;
+			right: -90%;
+		}
+
+		& > ul > li {
+
+			& > a {
+				padding-left: 50px;
+				color: #FFF;
+				text-transform: uppercase;
+				font-size: 1.4em;
+				text-decoration: none;
+
+				&:hover {
+					color: @green;
+				}
+			}
+		}
+
+		ul {
+			display: flex;
+			justify-content: flex-start;
+			align-items: flex-start;
+			flex-direction: column;
+			height: 100%;
+			margin: 0 auto !important;
+		}
+
+		li {
+			position: relative;
+			display: block;
+			flex-grow: unset;
+
+			&:after {
+				content: "";
+				position: absolute;
+				display: block;
+				right: 0 !important;
+				width: 0;
+				height: 1px;
+				background: rgba(255, 255, 255, 0.2);
+				-webkit-transition: width 2s;
+				&:after {
+					width: 100% !important;
+					left: 0 !important;
+					transition: left 2s;
+				}
+			}
+
+			a {
+				padding: 2% 10px;
+				display: block;
+			}
+
+			span {
+				padding: 0;
+			}
+
+		}
+	}
+
+	.btn-float-mobile {
+		position: fixed;
+		bottom: 10px;
+		right: 10px;
+		border: 0;
+		border-radius: 100%;
+		background-color: #63A55E;
+		height: 40px;
+		width: 40px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		padding: 0;
+		z-index: 2000;
+
+		.sprite-calendar {
+			transform: scale(0.75);
+		}
+	}
+}

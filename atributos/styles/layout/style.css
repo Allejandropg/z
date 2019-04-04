@@ -1,0 +1,135 @@
+/*font*/
+.fontRB {
+  font-family: "Roboto";
+  font-weight: 700;
+}
+/*colors*/
+.slide-size {
+  height: 83.777vh;
+}
+.slide-size .carousel-item {
+  height: 100%;
+}
+.slide-size .carousel-item img {
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.destaque-container {
+  background-image: linear-gradient(#5250e2, #41afe4);
+}
+.bottom-white {
+  display: block;
+  width: 100%;
+  padding-bottom: 10%;
+  background-image: url(../../imagens/_temp/bottom-white.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.info-box {
+  flex-direction: column;
+  background-color: #FFF;
+  box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.39);
+  padding: 15px;
+}
+.info-box .sprite {
+  margin-bottom: 7.2222%;
+}
+.info-box .desc-info {
+  margin-bottom: 0;
+}
+.content-info {
+  margin-bottom: 10.1666%;
+}
+.btn-custom-transparent {
+  display: flex;
+  text-transform: uppercase;
+  color: #838486;
+  border-radius: 0px;
+}
+.btn-custom-transparent .fa-users {
+  color: #77a34e;
+  border: 1px solid #77a34e;
+  font-size: 1.4em;
+}
+.btn-custom-transparent span {
+  border: 1px solid #77a34e;
+  border-right: 0;
+}
+.btn-custom-transparent > * {
+  padding: 8px;
+}
+.area-effect {
+  position: relative;
+  width: 100%;
+}
+.banner {
+  position: relative;
+  width: 70.3333%;
+  margin-left: auto;
+}
+.banner:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.1);
+}
+.arrows {
+  position: absolute;
+  width: 49.1666%;
+  padding-bottom: 67.6666%;
+  background-size: cover;
+}
+.arrow-transparent {
+  top: -8.1666%;
+  background-image: url(../../imagens/index/arrow-gray.svg);
+  z-index: -1;
+}
+.arrow-green {
+  top: 8.1666%;
+  left: 2.3333%;
+  background-image: url(../../imagens/index/arrow-green.svg);
+  z-index: 2;
+}
+@media only screen and (max-width: 1200px) {
+  .slide-size {
+    height: 60vh;
+  }
+}
+@media only screen and (max-width: 992px) {
+  .slide-size {
+    height: 50vh;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .slide-size {
+    height: 30vh;
+    min-height: 216px;
+  }
+  .carousel-indicators li {
+    width: 16px;
+    height: 16px;
+  }
+  .content-info {
+    margin-top: 0;
+    padding-top: 6%;
+  }
+  .info-box {
+    flex-direction: column;
+    width: 80%;
+    min-width: 150px;
+    margin: 0 auto 6%;
+  }
+}
+@media only screen and (max-width: 550px) {
+  .slide-size {
+    height: 20vh;
+    min-height: 142px;
+  }
+}
