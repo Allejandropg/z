@@ -19,13 +19,6 @@ img {
   padding-right: 10px;
   padding-left: 10px;
 }
-.btn-custom {
-  display: flex;
-  align-items: center;
-  background-color: #77a34e;
-  color: #FFF;
-  border-radius: 0;
-}
 a {
   color: #12083f;
   text-decoration: none;
@@ -34,10 +27,14 @@ a:hover {
   color: #77a34e;
   text-decoration: none;
 }
+.titulo-destaque {
+  color: #FFF;
+  margin-bottom: 4%;
+}
 .title-primary {
   font-family: 'Roboto';
   font-weight: 600;
-  color: #12083f;
+  color: #c84068;
   text-transform: uppercase;
   font-size: 2.813em;
 }
@@ -48,10 +45,12 @@ a:hover {
   font-size: 1.250em;
   margin-bottom: 8.6111%;
 }
+.destaque-container .desc {
+  color: #FFF;
+}
 .desc {
   font-size: 1.25em;
   line-height: 1.25em;
-  color: #707174;
 }
 .desc-info {
   color: #6d6e71;
