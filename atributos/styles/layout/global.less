@@ -28,35 +28,6 @@ a {
 		text-decoration: none;
 	}
 }
-.sprite {
-    background-image: url(../../imagens/index/spritesheet.png);
-    background-repeat: no-repeat;
-    display: block;
-}
-
-.sprite-calendar {
-    width: 30px;
-    height: 30px;
-    background-position: -5px -5px;
-}
-
-.sprite-cards {
-    width: 50px;
-    height: 51px;
-    background-position: -45px -5px;
-}
-
-.sprite-people {
-    width: 36px;
-    height: 51px;
-    background-position: -105px -5px;
-}
-
-.sprite-pin {
-    width: 35px;
-    height: 51px;
-    background-position: -5px -66px;
-}
 .title-primary {
   font-family: 'Roboto';
   font-weight: 600;
@@ -79,6 +50,18 @@ a {
 	&-info {
 		color: @textBox;
 		font-size:  1.25em;
+	}
+}
+.o-img {
+    display: block;
+    width: 100%;
+    height: 100%;
+	object-fit: cover;
+	&.is-absolute {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%,-50%);
 	}
 }
 

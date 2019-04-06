@@ -20,6 +20,11 @@
 }
 .destaque-container {
   background-image: linear-gradient(#5250e2, #41afe4);
+  padding-top: 74px;
+}
+.img-destaque {
+  position: relative;
+  padding-bottom: 100%;
 }
 .bottom-white {
   display: block;
@@ -34,9 +39,6 @@
   background-color: #FFF;
   box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.39);
   padding: 15px;
-}
-.info-box .sprite {
-  margin-bottom: 7.2222%;
 }
 .info-box .desc-info {
   margin-bottom: 0;
