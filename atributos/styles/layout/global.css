@@ -114,9 +114,6 @@ a:hover {
   -webkit-animation-delay: 2s;
 }
 @media only screen and (max-width: 992px) {
-  [class^="sprite"] {
-    transform: scale(0.75);
-  }
   .title-small {
     font-size: 1.2em;
   }
