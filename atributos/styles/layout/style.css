@@ -30,6 +30,7 @@
 }
 .area-inter {
   background-image: linear-gradient(#544ee6, #48b3e7);
+  color: #FFF;
 }
 .list-items {
   display: flex;
@@ -53,8 +54,39 @@
   border: 1px solid #CCC;
   overflow: hidden;
 }
+.area-topicos {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, auto));
+  grid-row-gap: 80px;
+  grid-column-gap: 8%;
+}
+.topico .desc {
+  font-size: .9em;
+}
+.foto {
+  display: block;
+  width: 50%;
+  margin: 0 auto 8%;
+  position: relative;
+  padding-bottom: 50%;
+}
 .c-footer {
-  background-image: linear-gradient(#4eaadb, #5250e2);
+  background-image: linear-gradient(#4eaadb 80%, #5250e2);
+  color: #FFF;
+}
+.c-footer .o-logo {
+  width: 20%;
+}
+.o-smm {
+  display: flex;
+  align-items: center;
+  list-style: none;
+}
+.o-smm li + li {
+  margin-left: 12px;
+}
+.o-smm a {
+  color: #FFF;
 }
 @media only screen and (max-width: 1200px) {
   .slide-size {
