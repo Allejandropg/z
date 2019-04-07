@@ -29,7 +29,7 @@
   background-image: url(../../imagens/_temp/top-white.svg);
 }
 .area-inter {
-  background-image: linear-gradient(#544ee6, #48b3e7);
+  background-image: linear-gradient(#5250e2, #48b3e7);
   color: #FFF;
 }
 .list-items {
@@ -74,13 +74,18 @@
   background-image: linear-gradient(#4eaadb 80%, #5250e2);
   color: #FFF;
 }
+.align-footer {
+  justify-content: space-between;
+}
 .c-footer .o-logo {
   width: 20%;
+  min-width: 150px;
 }
 .o-smm {
   display: flex;
   align-items: center;
   list-style: none;
+  padding: 0;
 }
 .o-smm li + li {
   margin-left: 12px;
@@ -111,16 +116,13 @@
     margin-top: 0;
     padding-top: 6%;
   }
-  .info-box {
-    flex-direction: column;
-    width: 80%;
-    min-width: 150px;
-    margin: 0 auto 6%;
+  .align-footer {
+    flex-direction: column-reverse;
+    align-items: center;
   }
 }
 @media only screen and (max-width: 550px) {
-  .slide-size {
-    height: 20vh;
-    min-height: 142px;
+  .area-topicos {
+    grid-row-gap: 30px;
   }
 }

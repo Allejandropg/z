@@ -153,7 +153,21 @@ a:hover {
   }
 }
 @media only screen and (max-width: 768px) {
+  .title-destaque,
+  .title-medium,
   .title-primary {
-    font-size: 1.813em;
+    font-size: 1.75em;
+  }
+  .sub-title {
+    font-size: 1.25em;
+  }
+  .espaco-container {
+    margin: 8% auto;
+  }
+  .text-underline {
+    margin-bottom: 8%;
+  }
+  .text-underline::before {
+    top: 106%;
   }
 }

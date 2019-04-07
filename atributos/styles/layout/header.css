@@ -51,7 +51,7 @@
 .nav-link::before {
   position: absolute;
   top: 0;
-  color: #12083f;
+  color: #5090ce;
   content: attr(data-hover);
   left: 50%;
   max-width: 0;
@@ -106,7 +106,7 @@
   }
   .nav-burger span {
     position: absolute;
-    background: #77a34e;
+    background: #FFF;
     display: block;
     right: 8px;
     left: 8px;
@@ -139,6 +139,9 @@
     -webkit-transform: rotate(-45deg);
     transform: rotate(-45deg);
   }
+  .nav-item {
+    margin-left: 20px;
+  }
   .nav-item + .nav-item::before {
     content: unset;
   }
@@ -146,7 +149,7 @@
     display: block;
   }
   .menu {
-    background: #163a7d;
+    background: #5250e2;
     display: none;
     position: fixed;
     top: 0;
@@ -166,7 +169,6 @@
     right: -90%;
   }
   .menu > ul > li > a {
-    padding-left: 50px;
     color: #FFF;
     text-transform: uppercase;
     font-size: 1.4em;

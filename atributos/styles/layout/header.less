@@ -41,7 +41,7 @@
 	padding: 0;
 	overflow: hidden;
 	&:hover {
-		color: #FFF;
+		color: @white;
 		&::before {
 			max-width: 100%;
 		}
@@ -114,7 +114,7 @@
 
 		span {
 			position: absolute;
-			background: @green;
+			background: @white;
 			display: block;
 			right: 8px;
 			left: 8px;
@@ -161,8 +161,13 @@
 		}
 	}
 
-	.nav-item + .nav-item::before {
-		content: unset;
+	.nav-item {
+		margin-left: 20px;
+		& + .nav-item {
+			&::before {
+				content: unset;
+			}
+		}
 	}
 
 	.menu-group {
@@ -173,7 +178,7 @@
 
 
 	.menu {
-		background: #163a7d;
+		background: @purpleBG;
 		display: none;
 		position: fixed;
 		top: 0;
@@ -197,7 +202,6 @@
 		& > ul > li {
 
 			& > a {
-				padding-left: 50px;
 				color: #FFF;
 				text-transform: uppercase;
 				font-size: 1.4em;
